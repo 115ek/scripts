@@ -671,7 +671,7 @@ function push_ota() {
   sflink="https://sourceforge.net/projects/$sf_project/files/$sf_path/$zip_name/download"
   cd OTA
   git add -A && git stash && git reset
-  git fetch git@github.com:ArianK16a/OTA.git
+  git fetch git@github.com:115ek/OTA.git
   git checkout FETCH_HEAD
   rm "$device_codename".json
   echo"$ls"
@@ -690,7 +690,7 @@ function push_ota() {
 }" > "$device_codename".json
   git add "$device_codename".json
   git commit -S -m "$device_codename: Automatic OTA update"
-  git push git@github.com:ArianK16a/OTA.git HEAD:lineage
+  git push git@github.com:115ek/OTA.git HEAD:master
   cd $script_dir
 }
 
